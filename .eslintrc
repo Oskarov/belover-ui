@@ -10,9 +10,13 @@
     "plugin:jest/recommended",
     "prettier"
   ],
+  "ignorePatterns": ["*.stories.tsx", "*.test.ts", "*.stories.mdx"],
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "jest": {
+      "version": 26
     }
   }
 }
