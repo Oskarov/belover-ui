@@ -1,4 +1,5 @@
 import React from 'react';
+import {StyledButton} from "./styles";
 
 export interface DefaultButtonProps extends React.ComponentPropsWithoutRef<'button'> {
     variant?: 'primary' | 'secondary' | 'danger';
@@ -11,7 +12,7 @@ const DefaultButton = React.forwardRef<HTMLButtonElement,
                              children,
                              ...props
                          }, ref) => {
-    return <button type="button" ref={ref} {...props}>{children}</button>;
+    return <StyledButton type="button" ref={ref} {...props}>{children}</StyledButton>;
 });
 
 DefaultButton.defaultProps = {

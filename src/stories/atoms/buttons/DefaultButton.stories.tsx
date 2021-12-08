@@ -15,4 +15,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   disabled: false,
+  isFullWidth: false,
+  variant: 'primary',
+  size: 'medium'
 };
