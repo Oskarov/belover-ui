@@ -4,7 +4,15 @@ import {FieldContext} from "./FieldContext";
 import {Label} from "./Label";
 import {Input} from "./Input";
 
-export const Field: React.FC = ({children}) => {
+interface IFieldComposition {
+    Label: typeof Label
+    Input: typeof Input
+}
+
+export const Field: React.FC & IFieldComposition = ({children}) => {
     const id = useUniqId();
     return <FieldContext.Provider value={id}>{children}</FieldContext.Provider>
 }
+
+Field.Label = Label;
+Field.Input = Input;
