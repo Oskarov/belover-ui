@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import {Field} from "../../../atoms/fields/Field";
+import {Field} from "../../../../atoms/fields/Field";
 
 export default {
     title: 'Field',
