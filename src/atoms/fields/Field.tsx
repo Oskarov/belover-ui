@@ -1,9 +1,9 @@
 import React from 'react';
-import {useUniqId} from "../../utils/useUniqId";
 import {FieldContext} from "./FieldContext";
 import {Label} from "./Label";
 import {Input} from "./Input";
 import {Textarea} from "./Textarea";
+import {useUniqueID} from "../../utils/useUniqueID";
 
 interface IFieldComposition {
     Label: typeof Label
@@ -12,7 +12,7 @@ interface IFieldComposition {
 }
 
 export const Field: React.FC & IFieldComposition = ({children}) => {
-    const id = useUniqId();
+    const id = useUniqueID();
     return <FieldContext.Provider value={id}>{children}</FieldContext.Provider>
 }
 
