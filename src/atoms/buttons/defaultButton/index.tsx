@@ -17,6 +17,7 @@ const DefaultButton = React.forwardRef<HTMLButtonElement,
 });
 
 DefaultButton.propTypes = {
+    children: PropTypes.any,
     variant: PropTypes.oneOf(['primary', 'secondary', 'danger']),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     isFullWidth: PropTypes.bool

@@ -6,12 +6,15 @@
   "module": "dist/index.ems.js",
   "sideEffects": false,
   "scripts": {
-    "test": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "rollup -c rollup.config.js",
+    "build:storybook": "build-storybook",
+    "build:types": "tsc -p tsconfig.build.json",
     "format": "prettier --write .",
-    "lint:format": "prettier --check .",
-    "lint:eslint": "eslint src/**"
+    "lint:format": "pretter --check .",
+    "lint": "eslint src/**",
+    "start": "start-storybook -p 6006",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

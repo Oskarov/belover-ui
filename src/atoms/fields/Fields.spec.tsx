@@ -54,7 +54,6 @@ describe('Field', () => {
                 </Field>
             );
 
-            // @ts-ignore
             expect(screen.getByLabelText('Textarea')).toHaveStyleRule('resize', 'none');
         });
     });
